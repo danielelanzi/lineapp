@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+  <!-- browsers not supporting CSS variables -->
+  <script>
+    if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
+  </script>
+  <title>Title</title>
+</head>
+<body data-theme="">
+  <div class="tbl settings-tbl text-sm">
+    <table class="tbl__table border-bottom border-2" aria-label="Table Example">
+      <thead class="tbl__header border-bottom border-2">
+        <tr class="tbl__row">
+          <th class="tbl__cell text-left" scope="col">
+            <span class="font-semibold">Dark Mode or Light Mode</span>
+          </th>
+  
+          <th class="sr-only" scope="col">Enable/disable option</span></th>
+        </tr>
+      </thead>
+  
+      <tbody class="tbl__body">
+        <tr class="tbl__row">
+          <td class="tbl__cell" role="cell">
+            <p>Enable/Disable</p>
+          </td>
+  
+          <td class="tbl__cell" role="cell">
+            <div class="flex justify-end">
+  
+              <div class="switch">
+                <input class="switch__input" type="checkbox" id="themeSwitch">
+                <label class="switch__label" for="themeSwitch" aria-hidden="true">Enable/Disable</label>
+                <div class="switch__marker" aria-hidden="true"></div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pct-bar  js-pct-bar">
+    <div class="pct-bar__bg js-pct-bar__bg margin-bottom-md" aria-hidden="true">
+      <!-- bar fill is created in JS  -->
+    </div>
+
+    <ul name='percentual' class="grid gap-xs">
+      <li class="flex items-center">
+        <span class="text-sm">Status switch mode <i id="on/off" class="js-pct-bar__value" data-pct-bar-bg="bg-primary">On</i></span>
+      </li>
+
+      <li class="flex items-center">
+        <span class="pct-bar__bullet bg-contrast-low margin-right-xxs" aria-hidden="true"></span>
+        <span class="text-sm">Utilizzo light mode (<i name='light_mode' class="js-pct-bar__value" data-pct-bar-bg="bg-contrast-low">37%</i>)</span>
+      </li>
+
+      <li class="flex items-center">
+        <span class="pct-bar__bullet bg-contrast-higher margin-right-xxs" aria-hidden="true"></span>
+        <span class="text-sm">Utilizzo dark mode (<i name='dark_mode' class="js-pct-bar__value" data-pct-bar-bg="bg-contrast-higher">63%</i>)</span>
+      </li>
+
+      <li class="flex items-center">
+        <span class="pct-bar__bullet bg-accent margin-right-xxs" aria-hidden="true"></span>
+        <span class="text-sm">Modalità preferita <i name='star'>Dark Mode</i></span>
+      </li>
+    </ul>
+</div>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
